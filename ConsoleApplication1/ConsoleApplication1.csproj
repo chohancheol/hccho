@@ -44,6 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1_basic.cs" />
+    <Compile Include="2_class.cs" />
+    <Compile Include="3_database.cs" />
+    <Compile Include="4_Files.cs" />
+    <Compile Include="5_DataStructure.cs" />
+    <Compile Include="9_help.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

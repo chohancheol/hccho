@@ -10,10 +10,26 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            // basic 문법
             _1_basic Test1 = new _1_basic();
 
-            Test1.Variable();
+            //Test1.Variable();
             //Test1.Array();
+
+            //Test1.yield();
+
+
+
+            // class
+            _2_class Test2 = new _2_class();
+
+            Test2.reference();
+
+            MyCustomer mc = new ConsoleApplication1.MyCustomer();
+
+            Console.WriteLine(mc.GetCustomerData());
+
+            Console.Read();
         }
     }
 }

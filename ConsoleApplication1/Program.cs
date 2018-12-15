@@ -21,9 +21,14 @@ namespace ConsoleApplication1
 
 
             // class
-            _2_class Test2 = new _2_class();
+            //_2_class Test2 = new _2_class();
 
-            Test2.reference();
+            //Test2.reference();
+
+            _8_sample Test8 = new ConsoleApplication1._8_sample();
+
+            int square = Test8.findLargestSquare();
+
 
             MyCustomer mc = new ConsoleApplication1.MyCustomer();
 

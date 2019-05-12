@@ -28,5 +28,6 @@ namespace ConsoleApplication1
 
         //알고리즘
         //https://github.com/LeeJunmyoung/AlgorithmExam/tree/master/AlgorithmExam/src
+        //https://github.com/l0co/codility-lessons-java
     }
 }

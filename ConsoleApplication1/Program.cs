@@ -11,7 +11,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             // basic 문법
-            _1_basic Test1 = new _1_basic();
+            //_1_basic Test1 = new _1_basic();
 
             //Test1.Variable();
             //Test1.Array();
@@ -35,9 +35,9 @@ namespace ConsoleApplication1
             //Console.WriteLine(mc.GetCustomerData());
 
 
-            String s = "Hello world, how are doing today";
-            Console.WriteLine(s);
-            Console.WriteLine(_81_reverse.ReverseString1(s));
+            //String s = "Hello world, how are doing today";
+            //Console.WriteLine(s);
+            //Console.WriteLine(_81_reverse.ReverseString1(s));
             //Console.WriteLine(_81_reverse.ReverseStringinArray(s));
             //Console.WriteLine(_81_reverse.reverse(s));
 
@@ -47,14 +47,27 @@ namespace ConsoleApplication1
 
             //_82_mergeToArray.merge(ar1, ar2);
 
-            _83_FrequentElement st = new _83_FrequentElement();
+            //_83_FrequentElement st = new _83_FrequentElement();
 
-            int[] a = { 1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 3, 3, 3, 3 };
-            Console.WriteLine(st.counter(a));
+            //int[] a = { 1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 3, 3, 3, 3 };
+            //Console.WriteLine(st.counter(a));
 
-            String str = "sabcabc";
+            //String str = "sabcabc";
 
-            Console.WriteLine(st.coun(str, "abc"));
+            //Console.WriteLine(st.counter(str, "abc"));
+
+            //_84_pattern pat1 = new _84_pattern();
+
+            //pat1.binToString();
+
+
+            _85_Combination combi = new _85_Combination();
+
+            combi.Test();
+
+            //_99_Test test1 = new _99_Test();
+
+            //test1.Test_01();
 
             Console.Read();
         }

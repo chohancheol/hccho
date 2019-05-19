@@ -91,6 +91,15 @@ namespace ConsoleApplication1
 
         public void Dictionary()
         {
+
+            //sample
+            //var scores = new Dictionary<string, int>()
+            //{
+            //    ["kim"] = 100,
+            //    ["lee"] = 90
+            //};
+            //int sc = scores["lee"];
+
             //Dictionary
             Dictionary<int, string> emp = new Dictionary<int, string>();
             emp.Add(1001, "Jane");

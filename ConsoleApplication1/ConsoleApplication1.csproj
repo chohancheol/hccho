@@ -45,9 +45,15 @@
   <ItemGroup>
     <Compile Include="1_basic.cs" />
     <Compile Include="2_class.cs" />
-    <Compile Include="3_database.cs" />
+    <Compile Include="3_database_linq.cs" />
     <Compile Include="4_Files.cs" />
     <Compile Include="5_DataStructure.cs" />
+    <Compile Include="81_reverse.cs" />
+    <Compile Include="82_mergeToArray.cs" />
+    <Compile Include="85_Combination.cs" />
+    <Compile Include="99_Test.cs" />
+    <Compile Include="84_pattern.cs" />
+    <Compile Include="83_FrequentElement.cs" />
     <Compile Include="8_sample.cs" />
     <Compile Include="9_help.cs" />
     <Compile Include="Program.cs" />

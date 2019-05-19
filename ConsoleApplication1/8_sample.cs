@@ -15,7 +15,7 @@ namespace ConsoleApplication1
                                  {0,0,1,1,1},
                                  {0,0,0,0,0 }
                                 };
-        //가장큰 사각형 그리기
+        //가장큰 정사각형 그리기
         public int findLargestSquare()
         {
 

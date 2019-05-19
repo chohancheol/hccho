@@ -38,7 +38,7 @@ namespace ConsoleApplication1
         }
 
 
-        public int coun(String s, String key)
+        public int counter(String s, String key)
         {
 
             int k = 0;

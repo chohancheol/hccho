@@ -21,7 +21,7 @@ namespace ConsoleApplication1
 
 
         //socket
-        //AbleOpus/NetworkingSamples
+        //https://github.com/AbleOpus/NetworkingSamples
 
         //block chain
         //http://www.industryconnect.org/c-sharp-blockchain-example-explains-blockchain-works/
@@ -29,5 +29,12 @@ namespace ConsoleApplication1
         //알고리즘
         //https://github.com/LeeJunmyoung/AlgorithmExam/tree/master/AlgorithmExam/src
         //https://github.com/l0co/codility-lessons-java
+
+
+        ///https://github.com/mohenjo/AlgorithmTraining/tree/master/BAEKJOON
+        ///https://www.acmicpc.net/problem/1157
+        ///
+        ///c# 샘플 코드(Common코드)
+        //https://icodebroker.tistory.com/category/C%23/Common?page=1
     }
 }

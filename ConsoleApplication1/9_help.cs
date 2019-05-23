@@ -36,5 +36,10 @@ namespace ConsoleApplication1
         ///
         ///c# 샘플 코드(Common코드)
         //https://icodebroker.tistory.com/category/C%23/Common?page=1
+
+        ///https://www.geeksforgeeks.org/
+
+
+
     }
 }

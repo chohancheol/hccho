@@ -25,6 +25,10 @@ namespace ConsoleApplication1
 
             //Test2.reference();
 
+            _4_Files Test4 = new _4_Files();
+
+            Test4.SerialWrite();
+
             //_8_sample Test8 = new ConsoleApplication1._8_sample();
 
             //int square = Test8.findLargestSquare();
@@ -61,9 +65,14 @@ namespace ConsoleApplication1
             //pat1.binToString();
 
 
-            _85_Combination combi = new _85_Combination();
+            //_85_Combination combi = new _85_Combination();
 
-            combi.Test();
+            //combi.Test();
+
+            //_86_Matrix_1 matrix1 = new _86_Matrix_1();
+
+            //matrix1.Test();
+
 
             //_99_Test test1 = new _99_Test();
 

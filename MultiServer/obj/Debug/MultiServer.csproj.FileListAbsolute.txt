@@ -1,0 +1,6 @@
+C:\Users\hccho\Documents\hccho\hccho\MultiServer\bin\Debug\Multi Server.exe.config
+C:\Users\hccho\Documents\hccho\hccho\MultiServer\bin\Debug\Multi Server.exe
+C:\Users\hccho\Documents\hccho\hccho\MultiServer\bin\Debug\Multi Server.pdb
+C:\Users\hccho\Documents\hccho\hccho\MultiServer\obj\Debug\MultiServer.csprojResolveAssemblyReference.cache
+C:\Users\hccho\Documents\hccho\hccho\MultiServer\obj\Debug\Multi Server.exe
+C:\Users\hccho\Documents\hccho\hccho\MultiServer\obj\Debug\Multi Server.pdb

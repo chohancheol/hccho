@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -177,5 +178,89 @@ namespace ConsoleApplication1
                 }
             }
         }
+
+        public void SerialWrite()
+        {
+            List<MyClass> myclass = new List<MyClass>();
+
+            MyClass myc1 = new MyClass() { aaaa = "1", bbbb = "11", cccc = "111", dddd="1", eeee="eeee" };
+            MyClass myc2 = new MyClass() { aaaa = "2", bbbb = "11", cccc = "111", dddd="2" };
+            MyClass myc3 = new MyClass() { aaaa = "3", bbbb = "11", cccc = "111", dddd="3" };
+            MyClass myc4 = new MyClass() { aaaa = "4", bbbb = "11", cccc = "111", dddd="4" };
+            myclass.Add(myc1);
+            myclass.Add(myc2);
+            myclass.Add(myc3);
+            myclass.Add(myc4);
+
+            S_Save(myclass);
+            S_Load();
+        }
+
+        private const string DATA_FILENAME = "sFile.dat";
+        public void S_Save(List<MyClass> myclass)
+        {
+
+            try
+            {
+                using (FileStream writerFileStream =
+                    new FileStream(DATA_FILENAME, FileMode.Create)){
+
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(writerFileStream, myclass);
+
+                }
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unable to save our friends' information");
+            } 
+        } 
+
+        public void S_Load()
+        {
+
+            if (File.Exists(DATA_FILENAME))
+            {
+
+                try
+                {
+                    List<MyClass> myclass = new List<MyClass>();
+
+                    using (FileStream readerFileStream = new FileStream(DATA_FILENAME,
+                        FileMode.Open, FileAccess.Read))
+                    {
+                        BinaryFormatter bf = new BinaryFormatter();
+                        myclass = (List<MyClass>)bf.Deserialize(readerFileStream);
+                    }
+
+                    foreach (MyClass item in myclass)
+                    {
+                        Console.WriteLine(item.aaaa + "," + item.bbbb + "," + item.cccc);
+                    }
+                    Console.Read();
+
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("There seems to be a file that contains " +
+                        "friends information but somehow there is a problem " +
+                        "with reading it.");
+                } 
+
+            } 
+
+        }
+    }
+
+    [Serializable]
+    class MyClass
+    {
+        public string aaaa;
+        public string bbbb;
+        public string cccc;
+        [NonSerialized]
+        public string dddd;
+        public string eeee;
     }
 }

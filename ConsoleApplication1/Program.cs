@@ -25,9 +25,13 @@ namespace ConsoleApplication1
 
             //Test2.reference();
 
-            _4_Files Test4 = new _4_Files();
+            //_4_Files Test4 = new _4_Files();
 
-            Test4.SerialWrite();
+            //Test4.SerialWrite();
+
+            _7_Thread Test7 = new _7_Thread();
+
+            Test7.ThreadTest();
 
             //_8_sample Test8 = new ConsoleApplication1._8_sample();
 

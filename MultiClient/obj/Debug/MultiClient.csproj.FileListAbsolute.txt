@@ -1,5 +1,8 @@
-C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\Multi Client.exe.config
-C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\Multi Client.exe
-C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\Multi Client.pdb
-C:\Users\hccho\Documents\hccho\hccho\MultiClient\obj\Debug\Multi Client.exe
-C:\Users\hccho\Documents\hccho\hccho\MultiClient\obj\Debug\Multi Client.pdb
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\obj\Debug\MultiClient.csprojResolveAssemblyReference.cache
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\MultiClient.exe.config
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\MultiClient.exe
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\MultiClient.pdb
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\obj\Debug\MultiClient.exe
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\obj\Debug\MultiClient.pdb
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\Common.dll
+C:\Users\hccho\Documents\hccho\hccho\MultiClient\bin\Debug\Common.pdb

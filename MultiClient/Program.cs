@@ -2,6 +2,12 @@
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections.Generic;
+using Common;
 
 namespace MultiClient
 {
@@ -47,10 +53,13 @@ namespace MultiClient
         {
             Console.WriteLine(@"<Type ""exit"" to properly disconnect client>");
 
+            Task t1 = new Task(new Action(ReceiveResponse));
+            t1.Start();
+            
             while (true)
             {
                 SendRequest();
-                ReceiveResponse();
+                //ReceiveResponse();
             }
         }
 
@@ -67,6 +76,7 @@ namespace MultiClient
 
         private static void SendRequest()
         {
+
             Console.Write("Send a request: ");
             string request = Console.ReadLine();
             SendString(request);
@@ -86,15 +96,47 @@ namespace MultiClient
             ClientSocket.Send(buffer, 0, buffer.Length, SocketFlags.None);
         }
 
+        private static void SendObject(string text)
+        {
+            List<NetPacket> lists = new List<NetPacket>();
+            NetPacket n1 = new NetPacket();
+            n1.Name = text;
+            NetPacket n2 = new NetPacket();
+            n2.Name = "BBBB";
+            lists.Add(n1);
+            lists.Add(n2);
+
+            BinaryFormatter bin = new BinaryFormatter();
+            MemoryStream memoryStream = new MemoryStream();
+
+            bin.Serialize(memoryStream, n1);
+
+            byte[] dataBytes = memoryStream.ToArray();
+            ClientSocket.Send(dataBytes);
+
+
+            //BinaryFormatter bin = new BinaryFormatter();
+            //MemoryStream mem = new MemoryStream();
+            //bin.Serialize(mem, lists);
+            //ClientSocket.Send(mem.GetBuffer(), mem.GetBuffer().Length, SocketFlags.None);
+
+            //byte[] buffer = Encoding.ASCII.GetBytes(text);
+            //ClientSocket.Send(buffer, 0, buffer.Length, SocketFlags.None);
+        }
+
         private static void ReceiveResponse()
         {
-            var buffer = new byte[2048];
-            int received = ClientSocket.Receive(buffer, SocketFlags.None);
-            if (received == 0) return;
-            var data = new byte[received];
-            Array.Copy(buffer, data, received);
-            string text = Encoding.ASCII.GetString(data);
-            Console.WriteLine(text);
+            while (true)
+            {
+                var buffer = new byte[2048];
+                int received = ClientSocket.Receive(buffer, SocketFlags.None);
+                if (received == 0) return;
+                var data = new byte[received];
+                Array.Copy(buffer, data, received);
+                string text = Encoding.ASCII.GetString(data);
+                Console.WriteLine(text);
+                Thread.Sleep(100);
+            }
         }
     }
 }

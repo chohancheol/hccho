@@ -22,6 +22,7 @@ namespace ConsoleApplication1
 
         //socket
         //https://github.com/AbleOpus/NetworkingSamples
+        //(chatting)http://csharp.net-informations.com/communications/files/download/csharp-chat-client_download.htm
 
         //block chain
         //http://www.industryconnect.org/c-sharp-blockchain-example-explains-blockchain-works/

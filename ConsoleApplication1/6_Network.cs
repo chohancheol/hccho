@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -23,7 +24,7 @@ namespace ConsoleApplication1
             //전송 클래스
             //NetworkStream, StreamReader/StreamWriter
             //BinaryReader, BinaryWriter
-
+            
         }
     }
 }

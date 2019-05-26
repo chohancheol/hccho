@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
 namespace MultiServer
@@ -10,7 +13,7 @@ namespace MultiServer
     {
         private static readonly Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         private static readonly List<Socket> clientSockets = new List<Socket>();
-        private const int BUFFER_SIZE = 2048;
+        private const int BUFFER_SIZE = 512;
         private const int PORT = 100;
         private static readonly byte[] buffer = new byte[BUFFER_SIZE];
 
@@ -18,7 +21,27 @@ namespace MultiServer
         {
             Console.Title = "Server";
             SetupServer();
-            Console.ReadLine(); // When we press enter close everything
+            while (true)
+            {
+                string sOption = Console.ReadLine(); // When we press enter close everything
+
+                if ( sOption== "exit")
+                {
+                    break;
+                }
+                else if (sOption == "list")
+                {
+                    Console.WriteLine("connect : " + clientSockets.Count);
+                }
+                else if (sOption == "hi")
+                {
+                    foreach (Socket socket in clientSockets)
+                    {
+                        byte[] data = Encoding.ASCII.GetBytes("Everyone Hi");
+                        socket.Send(data);
+                    }
+                }
+            }
             CloseAllSockets();
         }
 
@@ -83,6 +106,15 @@ namespace MultiServer
                 return;
             }
 
+            /* seriallize sample
+            byte[] dataBuffer = buffer; ;
+            BinaryFormatter bin = new BinaryFormatter();
+            MemoryStream mem = new MemoryStream();
+            mem.Write(dataBuffer, 0, dataBuffer.Length);
+            mem.Seek(0, 0);
+            NetPacket np = (NetPacket)bin.Deserialize(mem);
+            */
+
             byte[] recBuf = new byte[received];
             Array.Copy(buffer, recBuf, received);
             string text = Encoding.ASCII.GetString(recBuf);
@@ -91,7 +123,7 @@ namespace MultiServer
             if (text.ToLower() == "get time") // Client requested time
             {
                 Console.WriteLine("Text is a get time request");
-                byte[] data = Encoding.ASCII.GetBytes(DateTime.Now.ToLongTimeString());
+                byte[] data = Encoding.ASCII.GetBytes(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 current.Send(data);
                 Console.WriteLine("Time sent to client");
             }
@@ -103,6 +135,18 @@ namespace MultiServer
                 clientSockets.Remove(current);
                 Console.WriteLine("Client disconnected");
                 return;
+            }
+            else if (text.ToLower() == "all") // Client wants to exit gracefully
+            {
+                Console.WriteLine("All Publish");
+
+                foreach (Socket socket in clientSockets)
+                {
+                    byte[] data = Encoding.ASCII.GetBytes("Hi member?");
+
+                    if (socket != current)
+                        socket.Send(data);
+                }
             }
             else
             {

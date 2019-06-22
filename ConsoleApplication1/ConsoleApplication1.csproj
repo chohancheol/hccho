@@ -52,6 +52,8 @@
     <Compile Include="6_Network.cs" />
     <Compile Include="81_reverse.cs" />
     <Compile Include="82_mergeToArray.cs" />
+    <Compile Include="88_Recursive.cs" />
+    <Compile Include="87_Compress.cs" />
     <Compile Include="86_Matrix_1.cs" />
     <Compile Include="85_Combination.cs" />
     <Compile Include="99_Test.cs" />

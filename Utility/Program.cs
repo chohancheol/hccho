@@ -33,10 +33,13 @@ namespace Utility
             LinkedList.LLMain();
 
             //Tree
-            BinarySearch.BTSMain();
+            //BinarySearch.BTSMain();
 
             //Version Sorting
-            VersionSort.VSMain();
+            //VersionSort.VSMain();
+
+            //Array
+            Array.ArrayMain();
 
             Console.Read();
         }

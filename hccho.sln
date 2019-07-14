@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{2CDEE367-BA01-4155-A9A6-AED4282CA3D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network", "Network\Network.csproj", "{0BA2BFEB-6DB1-4454-9B51-2FAE89885DCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caculate", "Caculate\Caculate.csproj", "{249B19FB-F86C-4B72-8BB0-653755D4A42D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{2CDEE367-BA01-4155-A9A6-AED4282CA3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CDEE367-BA01-4155-A9A6-AED4282CA3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CDEE367-BA01-4155-A9A6-AED4282CA3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA2BFEB-6DB1-4454-9B51-2FAE89885DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA2BFEB-6DB1-4454-9B51-2FAE89885DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA2BFEB-6DB1-4454-9B51-2FAE89885DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA2BFEB-6DB1-4454-9B51-2FAE89885DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249B19FB-F86C-4B72-8BB0-653755D4A42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249B19FB-F86C-4B72-8BB0-653755D4A42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249B19FB-F86C-4B72-8BB0-653755D4A42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249B19FB-F86C-4B72-8BB0-653755D4A42D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

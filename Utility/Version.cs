@@ -25,6 +25,11 @@ namespace Utility
             versions.Add(v5);
 
             List<Version> sversions = (from ver in versions orderby ver.A, ver.B, ver.C, ver.D select ver).ToList();
+
+            foreach (Version item in sversions)
+            {
+                Console.WriteLine(string.Format("{0}.{1}.{2}.{3}", item.A, item.B, item.C, item.D));
+            }
         }
     }
     class Version

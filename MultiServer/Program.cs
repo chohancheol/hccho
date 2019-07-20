@@ -41,6 +41,14 @@ namespace MultiServer
                         socket.Send(data);
                     }
                 }
+                else
+                {
+                    foreach (Socket socket in clientSockets)
+                    {
+                        byte[] data = Encoding.ASCII.GetBytes(sOption);
+                        socket.Send(data);
+                    }
+                }
             }
             CloseAllSockets();
         }

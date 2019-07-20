@@ -22,6 +22,23 @@ namespace Network
             t1.Join();
             t2.Join();  // 종료 대기
             ThreadPool.QueueUserWorkItem(Calc, 20.0);
+
+            // 스레드에서 사용할 파라미터 설정후 Return 값 처리            
+            double rValue1 = 0;
+            double rValue2 = 0;
+
+            Thread ThreadForWork1 = new Thread(delegate () { rValue1 = Calc1(20.0); });
+            ThreadForWork1.Start();
+
+            ThreadForWork1.Join();
+
+            Thread ThreadForWork2 = new Thread(delegate () { rValue2 = Calc1(20.0); });
+            ThreadForWork2.Start();
+
+            ThreadForWork2.Join();
+
+            Console.WriteLine(rValue1 + "," + rValue2);
+
         }
 
         // radius라는 파라미터를 object 타입으로 받아들임
@@ -35,6 +52,16 @@ namespace Network
         static void Run()
         {
             Console.WriteLine("Run");
+        }
+
+        // radius라는 파라미터를 object 타입으로 받아들임
+        static double Calc1(object radius)
+        {
+            double r = (double)radius;
+            double area = r * r * 3.14;
+            Console.WriteLine("r={0},area={1}", r, area);
+
+            return area;
         }
     }
 }

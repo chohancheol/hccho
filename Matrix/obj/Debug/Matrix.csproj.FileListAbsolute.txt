@@ -1,0 +1,7 @@
+C:\hccho\Matrix\Matrix\bin\Debug\Matrix.exe.config
+C:\hccho\Matrix\Matrix\bin\Debug\Matrix.exe
+C:\hccho\Matrix\Matrix\bin\Debug\Matrix.pdb
+C:\hccho\Matrix\Matrix\obj\Debug\Matrix.csprojAssemblyReference.cache
+C:\hccho\Matrix\Matrix\obj\Debug\Matrix.csproj.CoreCompileInputs.cache
+C:\hccho\Matrix\Matrix\obj\Debug\Matrix.exe
+C:\hccho\Matrix\Matrix\obj\Debug\Matrix.pdb
